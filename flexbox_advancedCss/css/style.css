@@ -9,7 +9,7 @@
   --grey-dark-1: #333;
   --grey-dark-2: #777;
   --grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3); }
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
 
 * {
   margin: 0;
@@ -36,7 +36,7 @@ body {
 
 .logo {
   height: 3.25rem;
-  margin-left: 3rem; }
+  margin-left: 2rem; }
 
 .search {
   flex: 0 0 40%;
@@ -49,10 +49,10 @@ body {
     background-color: var(--grey-light-2);
     color: inherit;
     border: none;
-    padding: .7rem 2rem;
+    padding: 0.7rem 2rem;
     border-radius: 100px;
     width: 85%;
-    transition: all .2s;
+    transition: all 0.2s;
     margin-right: -3.25rem; }
     .search__input:focus {
       outline: none;
@@ -75,13 +75,51 @@ body {
     width: 2rem;
     fill: var(--grey-dark-3); }
 
-.user-nav__icon {
-  height: 2.25rem;
-  width: 2.25rem; }
+.user-nav {
+  display: flex;
+  align-self: stretch;
+  align-items: center; }
+  .user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .user-nav > *:hover {
+    background-color: var(--grey-light-2); }
+  .user-nav__icon-box {
+    position: relative; }
+  .user-nav__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: var(--grey-dark-2); }
+  .user-nav__notification {
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .user-nav__user-photo {
+    height: 3.75rem;
+    margin-right: 1rem;
+    border-radius: 50%; }
 
-.user-nav__user-photo {
-  height: 3.75rem;
-  border-radius: 50%; }
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem; }
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--grey-light-4); }
 
 .container {
   max-width: 140rem;
@@ -104,7 +142,10 @@ body {
 
 .sidebar {
   background-color: var(--grey-dark-1);
-  flex: 0 0 18%; }
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
   background-color: #fda025;
